@@ -4,6 +4,11 @@
  */
 package javaapplication1;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  *
  * @author Anthony
@@ -85,6 +90,11 @@ public class GUI extends javax.swing.JFrame {
         PatientGenderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Transgender Male", "Treansgender Female", "Non-Binary" }));
 
         jButton1.setText("Add Details");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         MedicalConditionsTA1.setColumns(20);
         MedicalConditionsTA1.setRows(5);
@@ -198,6 +208,65 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        try {
+            // Load the JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish a connection to the database
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/jdbc", "root", ""
+            );
+
+            // Example data to be inserted
+            String firstName = PatientFirstNameTF.getText();
+            String lastName = PatientSurnameTF.getText();
+            String gender = PatientGenderCB.getSelectedItem().toString()  ;
+            String dob = PatientDOBTF.getText();  // Assuming YYYY-MM-DD format
+            String bloodType = PatientBloodTF.getText();
+            String emergencyContactName = ECName1TF.getText();
+            String emergencyContactRelationship = ECRelationship1TF.getText();
+            String emergencyContactNumber = ECNumber1TF.getText();
+            String allergies = MedicalConditionsTA1.getText();
+            String medicalCondition =  MedicalConditionsTA.getText() ;
+
+            // Create a PreparedStatement for parameterized query
+            String sql = "INSERT INTO patient (fname, sname, gender, dob, blood_type, " +
+                    "emergency_contact_name, emergency_contact_relationship, emergency_contact_number, " +
+                    "allergies, medical_condition) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            // Set values for parameters
+            preparedStatement.setString(1, firstName);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setString(3, gender);
+            preparedStatement.setString(4, dob);
+            preparedStatement.setString(5, bloodType);
+            preparedStatement.setString(6, emergencyContactName);
+            preparedStatement.setString(7, emergencyContactRelationship);
+            preparedStatement.setString(8, emergencyContactNumber);
+            preparedStatement.setString(9, allergies);
+            preparedStatement.setString(10, medicalCondition);
+
+            // Execute the query
+            int rowsAffected = preparedStatement.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                System.out.println("Record inserted successfully.");
+            } else {
+                System.out.println("Failed to insert record.");
+            }
+
+            // Close resources
+            preparedStatement.close();
+            connection.close();
+
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

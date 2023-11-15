@@ -20,8 +20,8 @@ public class SecurityFundamentalsAndDevelopmentProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         /*GUI g= new GUI();
-         g.setVisible(true);*/
+         GUI g= new GUI();
+         g.setVisible(true);
          
         /* try {
             // Load the JDBC driver
@@ -55,7 +55,7 @@ public class SecurityFundamentalsAndDevelopmentProject {
 
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e);
-        }*/
+        }
         
         try {
             // Load the JDBC driver
@@ -111,7 +111,7 @@ public class SecurityFundamentalsAndDevelopmentProject {
 
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e);
-        }
+        }*/
     }
 }
 
