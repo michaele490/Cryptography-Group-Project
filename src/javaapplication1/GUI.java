@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -254,7 +255,7 @@ public class GUI extends javax.swing.JFrame {
             int rowsAffected = preparedStatement.executeUpdate();
             
             if (rowsAffected > 0) {
-                System.out.println("Record inserted successfully.");
+                JOptionPane.showMessageDialog(null, "Record inserted successfully.");
             } else {
                 System.out.println("Failed to insert record.");
             }
@@ -264,7 +265,7 @@ public class GUI extends javax.swing.JFrame {
             connection.close();
 
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println(e);
+            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
