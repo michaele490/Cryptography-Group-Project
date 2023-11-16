@@ -44,19 +44,19 @@ public class GUI extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        PatientFirstNameTF = new javax.swing.JTextField();
-        PatientDOBTF = new javax.swing.JTextField();
-        PatientSurnameTF = new javax.swing.JTextField();
-        PatientBloodTF = new javax.swing.JTextField();
-        ECNumber1TF = new javax.swing.JTextField();
-        ECRelationship1TF = new javax.swing.JTextField();
-        ECName1TF = new javax.swing.JTextField();
+        patientFirstName = new javax.swing.JTextField();
+        dobT = new javax.swing.JTextField();
+        patientSurName = new javax.swing.JTextField();
+        patientBloodType = new javax.swing.JTextField();
+        ecNumber = new javax.swing.JTextField();
+        ecRelation = new javax.swing.JTextField();
+        ecName = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        MedicalConditionsTA = new javax.swing.JTextArea();
+        medicalConditionsTA = new javax.swing.JTextArea();
         PatientGenderCB = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        MedicalConditionsTA1 = new javax.swing.JTextArea();
+        medicalConditionsTA1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,9 +84,9 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel22.setText("Allergies ");
 
-        MedicalConditionsTA.setColumns(20);
-        MedicalConditionsTA.setRows(5);
-        jScrollPane1.setViewportView(MedicalConditionsTA);
+        medicalConditionsTA.setColumns(20);
+        medicalConditionsTA.setRows(5);
+        jScrollPane1.setViewportView(medicalConditionsTA);
 
         PatientGenderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Transgender Male", "Treansgender Female", "Non-Binary" }));
 
@@ -97,9 +97,9 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        MedicalConditionsTA1.setColumns(20);
-        MedicalConditionsTA1.setRows(5);
-        jScrollPane2.setViewportView(MedicalConditionsTA1);
+        medicalConditionsTA1.setColumns(20);
+        medicalConditionsTA1.setRows(5);
+        jScrollPane2.setViewportView(medicalConditionsTA1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,36 +107,6 @@ public class GUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(PatientFirstNameLBL)
-                                    .addComponent(PatientGenderLBL))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(PatientFirstNameTF)
-                                    .addComponent(PatientGenderCB, 0, 160, Short.MAX_VALUE))
-                                .addGap(38, 38, 38)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(PatientDOBLBL)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(PatientDOBTF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(53, 53, 53))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(PatientSurnameLBL)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(PatientSurnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(50, 50, 50)))
-                                .addComponent(PatientBloodLBL)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PatientBloodTF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,17 +121,47 @@ public class GUI extends javax.swing.JFrame {
                                         .addGap(40, 40, 40)
                                         .addComponent(ECName1LBL)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(ECName1TF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ecName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(29, 29, 29)
                                         .addComponent(ECRelationship1LBL)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(ECRelationship1TF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ecRelation, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(31, 31, 31)
                                         .addComponent(ECNumber1LBL)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(ECNumber1TF, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(ecNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane2))))
+                            .addComponent(jScrollPane2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(PatientFirstNameLBL)
+                                    .addComponent(PatientGenderLBL))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(patientFirstName)
+                                    .addComponent(PatientGenderCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(38, 38, 38)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(PatientDOBLBL)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(dobT, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(53, 53, 53))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(PatientSurnameLBL)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(patientSurName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(50, 50, 50)))
+                                .addComponent(PatientBloodLBL)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(patientBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -173,16 +173,16 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PatientFirstNameLBL)
                     .addComponent(PatientSurnameLBL)
-                    .addComponent(PatientFirstNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PatientSurnameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(patientFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(patientSurName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PatientGenderCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PatientGenderLBL)
                     .addComponent(PatientDOBLBL)
-                    .addComponent(PatientDOBTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dobT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PatientBloodLBL)
-                    .addComponent(PatientBloodTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(patientBloodType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addComponent(jLabel18)
                 .addGap(18, 18, 18)
@@ -190,9 +190,9 @@ public class GUI extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(ECRelationship1LBL)
                         .addComponent(ECNumber1LBL)
-                        .addComponent(ECNumber1TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ECRelationship1TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ECName1TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ecNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ecRelation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ecName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(ECName1LBL))
                 .addGap(33, 33, 33)
                 .addComponent(jLabel22)
@@ -207,66 +207,90 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1304, 668));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        try {
-            // Load the JDBC driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Establish a connection to the database
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/jdbc", "root", ""
-            );
+        if (patientFirstName.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter patient first name");
+        } else if (patientSurName.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter patient sur name");
+        } else if (dobT.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter Date of birth");
+        } else if (patientBloodType.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter blood Type");;
+        } else if (ecName.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter Emergency Contact's first name");
+        } else if (ecRelation.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter Emergency Contact's relation with patient");
+        } else if (ecNumber.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter Emergency Contact number");
+        } else if (medicalConditionsTA1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter patient alergies");
+        } else if (medicalConditionsTA.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter patient medical conditions");
+        } else {
+            try {
+                // Load the JDBC driver
+                Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Example data to be inserted
-            String firstName = PatientFirstNameTF.getText();
-            String lastName = PatientSurnameTF.getText();
-            String gender = PatientGenderCB.getSelectedItem().toString()  ;
-            String dob = PatientDOBTF.getText();  // Assuming YYYY-MM-DD format
-            String bloodType = PatientBloodTF.getText();
-            String emergencyContactName = ECName1TF.getText();
-            String emergencyContactRelationship = ECRelationship1TF.getText();
-            String emergencyContactNumber = ECNumber1TF.getText();
-            String allergies = MedicalConditionsTA1.getText();
-            String medicalCondition =  MedicalConditionsTA.getText() ;
+                // Establish a connection to the database
+                Connection connection = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/jdbc", "root", ""
+                );
 
-            // Create a PreparedStatement for parameterized query
-            String sql = "INSERT INTO patient (fname, sname, gender, dob, blood_type, " +
-                    "emergency_contact_name, emergency_contact_relationship, emergency_contact_number, " +
-                    "allergies, medical_condition) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                // Example data to be inserted
+                String firstName = patientFirstName.getText();
+                String lastName = patientSurName.getText();
+                String gender = PatientGenderCB.getSelectedItem().toString();
+                String dob = dobT.getText();  // Assuming YYYY-MM-DD format
+                String bloodType = patientBloodType.getText();
+                String emergencyContactName = ecName.getText();
+                String emergencyContactRelationship = ecRelation.getText();
+                String emergencyContactNumber = ecNumber.getText();
+                String allergies = medicalConditionsTA1.getText();
+                String medicalCondition = medicalConditionsTA.getText();
 
-            // Set values for parameters
-            preparedStatement.setString(1, firstName);
-            preparedStatement.setString(2, lastName);
-            preparedStatement.setString(3, gender);
-            preparedStatement.setString(4, dob);
-            preparedStatement.setString(5, bloodType);
-            preparedStatement.setString(6, emergencyContactName);
-            preparedStatement.setString(7, emergencyContactRelationship);
-            preparedStatement.setString(8, emergencyContactNumber);
-            preparedStatement.setString(9, allergies);
-            preparedStatement.setString(10, medicalCondition);
+                // Create a PreparedStatement for parameterized query
+                String sql = "INSERT INTO patient (fname, sname, gender, dob, blood_type, "
+                        + "emergency_contact_name, emergency_contact_relationship, emergency_contact_number, "
+                        + "allergies, medical_condition) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-            // Execute the query
-            int rowsAffected = preparedStatement.executeUpdate();
-            
-            if (rowsAffected > 0) {
-                JOptionPane.showMessageDialog(null, "Record inserted successfully.");
-            } else {
-                System.out.println("Failed to insert record.");
+                // Set values for parameters
+                preparedStatement.setString(1, firstName);
+                preparedStatement.setString(2, lastName);
+                preparedStatement.setString(3, gender);
+                preparedStatement.setString(4, dob);
+                preparedStatement.setString(5, bloodType);
+                preparedStatement.setString(6, emergencyContactName);
+                preparedStatement.setString(7, emergencyContactRelationship);
+                preparedStatement.setString(8, emergencyContactNumber);
+                preparedStatement.setString(9, allergies);
+                preparedStatement.setString(10, medicalCondition);
+
+                // Execute the query
+                int rowsAffected = preparedStatement.executeUpdate();
+
+                if (rowsAffected > 0) {
+                    JOptionPane.showMessageDialog(null, "Record inserted successfully.");
+                } else {
+                    System.out.println("Failed to insert record.");
+                }
+
+                // Close resources
+                preparedStatement.close();
+                connection.close();
+
+            } catch (ClassNotFoundException | SQLException e) {
+                JOptionPane.showMessageDialog(null, e);
             }
-
-            // Close resources
-            preparedStatement.close();
-            connection.close();
-
-        } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
         }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -306,23 +330,18 @@ public class GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ECName1LBL;
-    private javax.swing.JTextField ECName1TF;
     private javax.swing.JLabel ECNumber1LBL;
-    private javax.swing.JTextField ECNumber1TF;
     private javax.swing.JLabel ECRelationship1LBL;
-    private javax.swing.JTextField ECRelationship1TF;
-    private javax.swing.JTextArea MedicalConditionsTA;
-    private javax.swing.JTextArea MedicalConditionsTA1;
     private javax.swing.JLabel PatientBloodLBL;
-    private javax.swing.JTextField PatientBloodTF;
     private javax.swing.JLabel PatientDOBLBL;
-    private javax.swing.JTextField PatientDOBTF;
     private javax.swing.JLabel PatientFirstNameLBL;
-    private javax.swing.JTextField PatientFirstNameTF;
     private javax.swing.JComboBox<String> PatientGenderCB;
     private javax.swing.JLabel PatientGenderLBL;
     private javax.swing.JLabel PatientSurnameLBL;
-    private javax.swing.JTextField PatientSurnameTF;
+    private javax.swing.JTextField dobT;
+    private javax.swing.JTextField ecName;
+    private javax.swing.JTextField ecNumber;
+    private javax.swing.JTextField ecRelation;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -330,5 +349,10 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea medicalConditionsTA;
+    private javax.swing.JTextArea medicalConditionsTA1;
+    private javax.swing.JTextField patientBloodType;
+    private javax.swing.JTextField patientFirstName;
+    private javax.swing.JTextField patientSurName;
     // End of variables declaration//GEN-END:variables
 }
